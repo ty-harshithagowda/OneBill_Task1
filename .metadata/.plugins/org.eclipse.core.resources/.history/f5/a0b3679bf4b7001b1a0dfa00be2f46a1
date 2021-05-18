@@ -1,0 +1,30 @@
+package com.onebill;
+
+import java.io.FileReader;
+	import java.io.IOException;   
+	public class Inputs  
+	{    
+	public static void main(String[] args)  
+	{  
+	CSVReader1 reader = null;  
+	try  
+	{  
+	reader = new CSVReader1(new FileReader("C:\\Users\\Harshitha Gowda\\Desktop\\Subscriptions.csv"));    
+	String [] nextLine;  
+	//read one line at a time  
+	while ((nextLine = reader.readNext()) != null)  
+	{  
+	for(String token : nextLine)  
+	{  
+	System.out.println(token);  
+	}  
+	System.out.print("\n");  
+	}  
+	}  
+	catch (Exception e)   
+	{  
+	e.printStackTrace();  
+	}  
+	}  
+	}  
+

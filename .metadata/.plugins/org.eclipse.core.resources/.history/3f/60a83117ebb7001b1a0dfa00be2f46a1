@@ -1,0 +1,16 @@
+package com.onebill;
+
+import java.util.Scanner;
+
+public class UserInputs {
+
+	
+		  public static void main(String[] args) {
+		    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+		    System.out.println("Enter Subscriber_Account_Number");
+
+		    String userInputs = myObj.nextLine();  // Read user input
+		    System.out.println("Subscriber_Account_Number is: "+userInputs );  // Output user input
+		  
+		}
+}

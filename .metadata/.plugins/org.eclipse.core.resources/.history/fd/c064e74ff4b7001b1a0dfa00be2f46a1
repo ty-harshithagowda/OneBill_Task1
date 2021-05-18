@@ -1,0 +1,19 @@
+package com.onebill;
+
+import java.io.FileReader;
+
+public class CSVReader1 {
+
+	public CSVReader1(FileReader fileReader) {
+	}
+
+	public void CSVReader(FileReader fileReader) {
+		
+	}
+
+	public String[] readNext() {
+		
+		return null;
+	}
+
+}

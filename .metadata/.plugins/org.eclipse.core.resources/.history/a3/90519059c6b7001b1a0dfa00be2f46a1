@@ -1,0 +1,39 @@
+package com.onebill;
+
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Excel {
+	public static void main(String[] args) throws IOException {
+		getRowCount();
+		getCellData();
+	}
+
+	public static void getCellData() throws IOException {
+		String excelpath ="./data/task.xlsx.xltx";
+		XSSFWorkbook workbook = new XSSFWorkbook(excelpath);
+		XSSFSheet sheet = workbook.getSheet("Sheet1");
+		
+		String value = sheet.getRow(1).getCell(0).getStringCellValue();
+	}
+	
+	
+	
+
+	
+	public static void getRowCount() {
+		try {
+			String excelpath ="./data/task.xlsx.xltx";
+			XSSFWorkbook workbook = new XSSFWorkbook(excelpath);
+			XSSFSheet sheet = workbook.getSheet("Sheet1");
+			int rowCount = sheet.getPhysicalNumberOfRows();
+			System.out.println("No of rows:"+rowCount);
+		}catch(Exception exp) {
+			System.out.println(exp.getCause());
+			System.out.println(exp.getMessage());
+			exp.printStackTrace();
+		}
+	}
+}

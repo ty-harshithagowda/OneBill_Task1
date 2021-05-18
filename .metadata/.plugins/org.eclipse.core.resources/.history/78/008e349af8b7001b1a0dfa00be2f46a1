@@ -1,0 +1,19 @@
+package com.onebill;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Inputs  {
+	
+public static void main(String[] args) throws IOException {
+	FileReader  file=new FileReader("C:\\Users\\Harshitha Gowda\\Desktop\\Subscriptions.csv");
+	BufferedReader br=new BufferedReader(file); 
+	String line;
+	while ((line = br.readLine()) != null) { 
+	    // use comma as separator 
+	    String[] cols = line.split("|"); 
+	    System.out.println("Coulmn 4= " + cols[4] + " , Column 5=" + cols[5]); 
+	} 
+}
+}
