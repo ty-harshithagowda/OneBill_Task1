@@ -10,6 +10,7 @@ public class Inputs {
 	public static void main(String[] args) throws IOException {
 		Scanner myObj = new Scanner(System.in); // Create a Scanner object
 		System.out.println("Enter Subscriber_Account_Number");
+		
 		try {
 
 			String userInputs = myObj.nextLine(); // Read user input
@@ -17,9 +18,8 @@ public class Inputs {
 			BufferedReader br = new BufferedReader(file);
 			String line;
 			while ((line = br.readLine()) != null) {
-				// use comma as separator
 				String[] cols = line.split("|");
-				System.out.println(cols);
+				System.out.println("Product_Name");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

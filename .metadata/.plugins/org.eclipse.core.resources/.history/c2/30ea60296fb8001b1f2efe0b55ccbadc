@@ -1,0 +1,30 @@
+package com.onebill;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.Scanner;
+
+public class ReadFullExcel {
+
+	public static void main(String[] args) {
+		try {
+    		FileReader  file=new FileReader("C:\\Users\\Harshitha Gowda\\Desktop\\Subscriptions.csv");
+			BufferedReader csvReader=new BufferedReader(file);
+			String row;
+			
+			while((row=csvReader.readLine())!=null) {
+				String[] data= row.split(",");  //array of string
+				System.out.println(row);
+				for(String index:data) {
+					System.out.printf("%-25s", index);   //printf for printing table
+				}
+			//	System.out.println("Activation_Date:"+values[0] +", Product_Name:"+values[5]);
+				System.out.println();
+			}
+			
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+}
+}

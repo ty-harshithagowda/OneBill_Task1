@@ -1,0 +1,31 @@
+package com.onebill;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Modified {
+public static void main(String[] args) throws IOException {
+	
+	Scanner myObj = new Scanner(System.in); // Create a Scanner object
+	System.out.println("Enter Subscriber_Account_Number");
+	
+	
+	String path="C:\\Users\\Harshitha Gowda\\Desktop\\Subscriptions.csv";
+	String line="";
+	
+	try {
+		BufferedReader br=new BufferedReader(new FileReader(path));
+		
+		
+		while((line=br.readLine())!=null) {
+			String[] values=line.split(",");
+			System.out.println(values[1]);
+		}
+	} catch (FileNotFoundException e) {
+		
+	}
+}
+}
